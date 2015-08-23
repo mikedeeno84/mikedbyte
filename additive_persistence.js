@@ -5,17 +5,17 @@ Use the Parameter Testing feature in the box below to test your code with differ
 
 function AdditivePersistence(num, runs) { 
 if (num<10)
-  return 0;
-if (runs==null)
+  return 0;//if number is already single digit returns 0
+if (runs==null) //initiates value for variable nums if there is none input.
   runs=0;
 var numStr=num.toString();
-var total=0;
+var total=0;//variable to hold total
 for (var counter=0; counter<numStr.length; counter++)
-  total+=parseInt(numStr[counter]);
+  total+=parseInt(numStr[counter]);//totals up all digits
 if (total>9)
-  return AdditivePersistence(total,runs+1);
+  return AdditivePersistence(total,runs+1); //recursively runs function until total becomes a single digit 
 else
-  return runs+1;
+  return runs+1;//conditions have been met, increment and return total # of runs
 }
          
    
