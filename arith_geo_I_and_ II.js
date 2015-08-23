@@ -5,14 +5,14 @@ Have the function ArithGeo(arr) take the array of numbers stored in arr and retu
 Use the Parameter Testing feature in the box below to test your code with different arguments. */
 
 function ArithGeo(arr) {
-for (var count=0; count<arr.length-2;count++) {
+for (var count=0; count<arr.length-2;count++) { //checks the sequence for a constant increment
 if (arr[count+1]-arr[count]!=arr[count+2]-arr[count+1])
   break;
 }
 if (count===arr.length-2)
  return "Arithmetic"
 
-for (count=0; count<arr.length-2;count++) {
+for (count=0; count<arr.length-2;count++) { //checks the sequence for a constant multiplier
 if (arr[count+1]/arr[count]!=arr[count+2]/arr[count+1])
   break;
 }
