@@ -6,10 +6,10 @@ function AlphabetSoup(str) {
 	var newStr="";
   for (var counter=0; counter<26;counter++){
     var start=65;
-  	var lStart=97;
+    var lStart=97;
     start+=counter;
-  	lStart+=counter;
-  		for (var lCounter=0; lCounter<str.length; lCounter++){
+    lStart+=counter;
+  	for (var lCounter=0; lCounter<str.length; lCounter++){ 
           if (str[lCounter]===String.fromCharCode(start) || str[lCounter]===String.fromCharCode(lStart))
             newStr+=str[lCounter];
         }
