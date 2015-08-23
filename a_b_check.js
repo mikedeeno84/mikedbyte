@@ -9,12 +9,12 @@ function ABCheck(str) {
       if (str[counter]==="A" || str[counter]==="a"){
         var bCounter=counter+4;
         var BCounter=counter-4;
-        if((str[bCounter]==="B"||str[bCounter]==="b")||(str[BCounter]==="B"||str[BCounter]==="b"))
-        	abCount++;
+        if((str[bCounter]==="B"||str[bCounter]==="b")||(str[BCounter]==="B"||str[BCounter]==="b"))//checks indexes above and below any "A"s found in index
+        	abCount++;//records each time a & b are seperated appropriately
        }
     }
 	if (abCount>=1)
-		return "true"
+		return "true" //returns true if spacing conditions have been met at least once
   return "false"
          
 }
