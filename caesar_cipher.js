@@ -6,15 +6,15 @@ function CaesarCipher(str,num) {
 ans='';
 var alpha="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 alpha=alpha.split("");
-var code;
-for (var count=0;count<str.length;count++){
-  if (alpha.indexOf(str[count])>-1){
-  	code=str.charCodeAt(count)+num;
+var code;//holds character codes
+for (var count=0;count<str.length;count++){//loops through initial string
+  if (alpha.indexOf(str[count])>-1){// ensures that the character is in fact a letter
+  	code=str.charCodeAt(count)+num;//increments the letter and stores the charater code
   	if (code>=123 || (code>90 && code<97))
-    	  code=code-26;
+    	  code=code-26;//if new code is not a letter decrements the code by 26 so it will properly loop the alphabet
   	ans+=String.fromCharCode(code);
   }
-  else
+  else //adds in the character to the result if it is not a letter with no edits
     ans+=str[count];
 }
  
