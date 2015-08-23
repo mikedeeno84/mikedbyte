@@ -4,9 +4,9 @@ Use the Parameter Testing feature in the box below to test your code with differ
 */
 function BinaryConverter(str) { 
 num=parseInt(str)
-ans=0;
+ans=0; //holds binary result
 for(var count=0;count<str.length; count++)
-  ans=ans*2+parseInt(str[count]);
+  ans=ans*2+parseInt(str[count]); //increases binary result by each digit within the initial string
   return ans
          
 }
