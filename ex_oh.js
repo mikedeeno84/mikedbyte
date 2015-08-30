@@ -4,7 +4,7 @@ Use the Parameter Testing feature in the box below to test your code with differ
 function ExOh(str) { 
 	var ex=0;
 	var oh=0;
-  	for (var letter in (str)){
+  	for (var letter in (str)){ //loops through and counts totals of xs and os
   		if (str[letter]==="x")
           ex++;
 		if (str[letter]==="o")
