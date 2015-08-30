@@ -2,7 +2,7 @@
 
 Use the Parameter Testing feature in the box below to test your code with different arguments.
 */
-
+//same as Letter Count I
 function LetterCount(str) { 
 function inWord(inStr){
 	var used=[];
