@@ -1,6 +1,6 @@
 def FirstFactorial(num): 
   result=1
-  while num>0:
+  while num>0: # loop down from starting number multiplying each number by the result variable and decrementing the num variable on each iteration
     result=result*num
     num=num-1
   return result
