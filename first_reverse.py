@@ -1,7 +1,7 @@
 def FirstReverse(str): 
   i=len(str)-1
   output=""
-  while i>=0:
+  while i>=0: #loop through the string starting from the back of the index and adding it to the output variable up to and including when the index equals 0
     output=output+str[i]
     i=i-1
   return output
