@@ -5,16 +5,16 @@ Use the Parameter Testing feature in the box below to test your code with differ
 
 function MultiplicativePersistence(num) { 
 if (num<10)
-  return 0
-var runs=0;
-var total=1;
-while (num>=10){
-	numStr=num.toString();	  
-	for (var counter=0; counter<numStr.length; counter++)
+  return 0//returns 0 if there the number is already a single digit number
+var runs=0;//sets an inital value for the total numer of runs 
+var total=1;//temporarily holds the result of multiplying the digits
+while (num>=10){//the loop continues to multily digits until num becomes a single digit
+	numStr=num.toString();	  //converts the number to a string to modify its digits
+	for (var counter=0; counter<numStr.length; counter++)//loops through the string of digits
   		total*=parseInt(numStr[counter]);
-  		num=total;
-  		total=1;
-		runs++;
+  		num=total;//sets num equal to the product of the digits
+  		total=1;//resets total to 1
+		runs++;//increase by 1 the total number of runs
 }
   return runs
 }
