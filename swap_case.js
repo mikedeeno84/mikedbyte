@@ -7,11 +7,11 @@ function SwapCase(str) {
 var newStr="";
 var count=0;
 while (count<str.length){
-  if(str.charCodeAt(count)>=65 && str.charCodeAt(count)<=90)
-    newStr+=str[count].toLowerCase();
+  if(str.charCodeAt(count)>=65 && str.charCodeAt(count)<=90)//determines if the character is uppercase
+    newStr+=str[count].toLowerCase();//capitalize current letter and add to result string
   else
-    newStr+=str[count].toUpperCase();
-      count++;
+    newStr+=str[count].toUpperCase();//otherwise, lower case current letter, and add to result string
+  count++;//increment count variable
   
 }
 return newStr;        
