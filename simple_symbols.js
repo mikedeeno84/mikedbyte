@@ -4,16 +4,16 @@ Use the Parameter Testing feature in the box below to test your code with differ
 
 function SimpleSymbols(str) { 
 	var alpha="abcdefghijklmnopqrstuvwxyz";
-    var acceptable="0123456789+=";
-    for(var letter=0; letter<str.length;letter++){
-      if (alpha.indexOf(str[letter])>-1){
-        if (letter==0)
-          return "false"
-        if (str[letter-1]!="+" || str[letter+1]!="+")
-          return "false"
-          }
+    	var acceptable="0123456789+=";
+    	for(var letter=0; letter<str.length;letter++){
+      		if (alpha.indexOf(str[letter])>-1){//condition is met if the str[letter] is equal to a letter
+        		if (letter==0)//the first character cannot be a letter so returns false
+          			return "false"
+        	if (str[letter-1]!="+" || str[letter+1]!="+")//checks the index of the string preceding or following the letter.  if they do not equal a "+" return false
+          		return "false"
+          	}
     }
-  return "true"; 
+  return "true"; //no failing conditions were met, the function returns true
          
 }
    
