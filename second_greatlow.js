@@ -4,7 +4,7 @@ Use the Parameter Testing feature in the box below to test your code with differ
 */
 function SecondGreatLow(arr) { 
 var ordArray=[];
-function low(set){
+function low(set){//determine smallest item in an array
 	var min=set[0];
   	for (var count=0;count<set.length;count++){
     	if (set[count]<=min)
@@ -13,16 +13,16 @@ function low(set){
   return min
 }
 var max=arr.length;  
-for (var count=0;count<max;count++){
-  if(ordArray.indexOf(low(arr))===-1)
+for (var count=0;count<max;count++){//loops through array and puts it in order
+  if(ordArray.indexOf(low(arr))===-1)//if ordArray doesnt have the minimum number add it to ordArray
   	ordArray.push(low(arr));
-  arr.splice(arr.indexOf(low(arr)), 1)
+  arr.splice(arr.indexOf(low(arr)), 1)//splice that number out of the array
 }
-  var secLow=ordArray[1];
-  var secHi=ordArray[ordArray.length-2];
-if (ordArray.length===1)
+  var secLow=ordArray[1];//sets variable value to the second item in the ordered array (2nd lowest)
+  var secHi=ordArray[ordArray.length-2];//sets variable value to the second to last item in the array(2nd greatest)
+if (ordArray.length===1)//if the ordered array is only 1 number long, return that number twice 
   return ordArray[0]+" "+ordArray[0];
-return secLow.toString()+" "+ secHi.toString();
+return secLow.toString()+" "+ secHi.toString();//return as a string the 2nd lowest and 2nd greatest numbers
 }
    
 // keep this function call here 
