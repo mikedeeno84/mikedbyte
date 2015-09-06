@@ -11,11 +11,11 @@ if (num===3)
   return "true";
 if (num%3===0 || num%2===0)
   return "false";
-for (var i=5; i*i<=num; i+=2){
+for (var i=5; i*i<=num; i+=2){//loops through all odd numbers but to the square root of the number to check for divisiblity
   if(num%i===0)
     return "false";
 	}
-return "true";
+return "true";//no divisibilty found, return "true"
   
          
 }
