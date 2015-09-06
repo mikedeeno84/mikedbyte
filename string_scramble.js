@@ -5,11 +5,11 @@ Use the Parameter Testing feature in the box below to test your code with differ
 function StringScramble(str1,str2) { 
 var arr1=str1.split("")
 for (var count=0; count<str2.length; count++){
-	if(arr1.indexOf(str2[count])===-1)
-      return false;
-  	arr1.splice(arr1.indexOf(str2[count]),1);
+	if(arr1.indexOf(str2[count])===-1)//checks each character in str2 to check that it appears in arr1
+      		return false;//if the character doesnt appear, return false
+  	arr1.splice(arr1.indexOf(str2[count]),1);//splice out from arr1 the current character from str2 to account for repeated letters
 }
-return true
+return true //no failing conditions found, return true
          
 }
    
