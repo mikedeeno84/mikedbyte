@@ -5,12 +5,13 @@ Use the Parameter Testing feature in the box below to test your code with differ
 
 function PowersofTwo(num) { 
 	if(num/2===1)
-      return "true"
-	else (num=num/2)
-    if (num<2)
-      return "false"
-	num=PowersofTwo(num)
-  return num; 
+		return "true"
+	else 
+		num=num/2
+    	if (num<2)
+		return "false"
+	num=PowersofTwo(num)//functions recurs, dividing itself by 2 until it gets a results equal to 1 (return "true") or less than 2 (return "false")
+	return num; 
          
 }
    
