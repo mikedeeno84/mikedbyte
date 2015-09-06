@@ -4,19 +4,19 @@ Use the Parameter Testing feature in the box below to test your code with differ
 
 function RunLength(str) { 
 var newStr="";
-var current=str[0];
+var current=str[0];//initial value for the current letter
 var ltrCount=0;
 for (var count=0;count<=str.length;count++){
-  if (current===str[count])
-    ltrCount++;
+  if (current===str[count])//tests if the current item in loop is equal to previous letter checked
+    ltrCount++;//increases the recorded # of appearances for that letter
   else{
-    ltrCount+=+"";
-    newStr+=ltrCount+current;
-    current=str[count];
-    ltrCount=1;
+    ltrCount+="";//converts the total appearances to a string
+    newStr+=ltrCount+current;//adds the total appearances then current letter to the output string
+    current=str[count];//sets new value for current
+    ltrCount=1;//sets new numbers of apperances at 1
   }
 }
-  return newStr; 
+  return newStr;//returned the compressed string
          
 }
    
