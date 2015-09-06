@@ -6,10 +6,10 @@ function SimpleAdding(num) {
 	var total=0;
   	start=1;
   	while (start<=num){
-      total+=start;
-      start++;
-    }
-  return total; 
+      		total+=start;//increase the total by the variable "start" which also acts as the counter 
+      		start++;//increment start
+	}
+	return total; 
          
 }
    
