@@ -4,16 +4,16 @@ Use the Parameter Testing feature in the box below to test your code with differ
 
 function Palindrome(str) { 
 	var store="";
-  	for (var letter in str){
-      if (str[letter]!=" ")
-        store+=str[letter];
-    }
-	str=store.toLowerCase();
-    store="";
-    for (letter=(str.length-1);letter>=0;letter--)
-      store+=str[letter];
-	if (str===store)
-      return "true"
+  	for (var letter in str){//strips all spaces from the string
+      		if (str[letter]!=" ")
+			 store+=str[letter];
+	}
+	str=store.toLowerCase();//converts the string to lowercase
+	store="";//resets store to an empty string
+	for (letter=(str.length-1);letter>=0;letter--)//reverses the string and stores it in variable "store"
+		store+=str[letter];
+	if (str===store)//returns true if the reversed string is the same as the input string (stripped of spaces and capitalization)
+      		return "true"
     
   return "false"; 
          
