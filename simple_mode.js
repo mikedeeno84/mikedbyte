@@ -5,23 +5,23 @@ Use the Parameter Testing feature in the box below to test your code with differ
 
 
 function SimpleMode(arr) { 
-var mode=arr[0];
+var mode=arr[0];//sets an initial value for the mode
 var modeCount=0;
 var letterCount=0;
 var current;
-for (var count=0; count<arr.length;count++){
-  	current=arr[count];
+for (var count=0; count<arr.length;count++){//loops through each number to count the number of appearances for each
+  	current=arr[count];//currents value is reset to arr[count]
 	letterCount=0;
-  	for (var inCount=0; inCount<arr.length;inCount++){
-      if (arr[inCount]===current)
-        letterCount++;
- 	  if (letterCount>modeCount){
-        modeCount=letterCount;
-        mode=arr[inCount];
-      }
+  	for (var inCount=0; inCount<arr.length;inCount++){//starts at beginning of the string and counts appearances of the number represented by "current"
+      		if (arr[inCount]===current)
+        		letterCount++;//match found, incremement total number of appearances
+ 	  	if (letterCount>modeCount){
+        		modeCount=letterCount;//if lettCount is greater than modeCount set new value of modeCount to letterCount
+        		mode=arr[inCount];//new mode is found mode is set to letter and arr[inCount]
+      		}
     }
 }
-  if (modeCount===1)
+  if (modeCount===1)//if the number of appearances of the mode is 1, then there is no mode, return -1
     return -1
   return mode; 
          
