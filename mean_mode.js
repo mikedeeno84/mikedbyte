@@ -4,23 +4,23 @@ Use the Parameter Testing feature in the box below to test your code with differ
 */
 function MeanMode(arr) { 
 var mode;
-var totalApps=1;
+var totalApps=1;//sets a benchmark to define mode.  a number must have at least two appearances to be a mode
 var total=0;
-for (var counter=0;counter<arr.length; counter++){
-  var apps=0;
-  total+=arr[counter];
-  	for (var inCounter=0; inCounter<arr.length; inCounter++){
-      if (arr[inCounter]===arr[counter])
-          apps++;
-      		
-      if (apps>totalApps){
-        totalApps=apps;
-        mode=arr[counter];
-      }
+for (var counter=0;counter<arr.length; counter++){//loops through array
+  var apps=0;//resets total # of appearances of a number to zero at each iteration of the loop
+  total+=arr[counter]; //tracks the array total to be used to calculate mean
+  for (var inCounter=0; inCounter<arr.length; inCounter++){ //secondary loop using variable inCounter.. checking for mode
+    if (arr[inCounter]===arr[counter])//checks each item in the array to see if its value matches that of the array at its current index
+        apps++; //increments the total # of appearances of a particular number
+    		
+    if (apps>totalApps){
+      totalApps=apps;//if the total appearances exceeds the number of appearances of the current mean set that as the new benchmark for the mode
+      mode=arr[counter]; //sets the mode to the current value of arr[counter], we have a new mode
     }
+  }
 
 }
-var mean=total/arr.length;
+var mean=total/arr.length;//calculates mean
 if (mean===mode)
   return 1
 if (mean!=mode)  
