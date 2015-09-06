@@ -5,16 +5,16 @@ Use the Parameter Testing feature in the box below to test your code with differ
 
 function PalindromeTwo(str) { 
 	var store="";
-  	for (var letter in str){
+  	for (var letter in str){//loops through string and strips it of non letter characters, stores it in "store"
             if ((str.charCodeAt(letter)>=65 && str.charCodeAt(letter)<=90) || (str.charCodeAt(letter)>=97 && str.charCodeAt(letter)<=122))
         store+=str[letter];
     }
-	str=store.toLowerCase();
-    store="";
-    for (letter=(str.length-1);letter>=0;letter--)
-      store+=str[letter];
-	if (str===store)
-      return "true"
+	str=store.toLowerCase();//str now is the original string stripped of non letter characters and capitlization
+    	store="";//store reset to an empty string
+    	for (letter=(str.length-1);letter>=0;letter--)//stores the reversed string in variable "strore"
+      		store+=str[letter];
+	if (str===store)// tests if the reversed string is the same as the original
+		return "true"
     
   return "false"; 
          
