@@ -3,9 +3,9 @@
 Use the Parameter Testing feature in the box below to test your code with different arguments. */
 
 function TimeConvert(num) { 
-	var hours=parseInt((num)/60);
-  	var minutes=num-(hours*60)
-  return hours+ ":" + minutes; 
+	var hours=parseInt((num)/60);//determine number of hours
+  	var minutes=num-(hours*60)//determines number of minutes into the current hour
+  return hours+ ":" + minutes; //returns hours and in minutes as a string in the requested format
          
 }
    
