@@ -1,3 +1,2 @@
 # mikedbyte
-i dont believe i've ever messed with github before...
-id like some moon tacos
+This is my first repository on github.  I've listed all my completed challenges on coderbyte and recently commented on them.  The solutions are from various stages in my coding development and while commenting them, unsurprisingly I found many obvious inefficiencies.  Thankfully as I moved onto more recently attempted challenges I found fewer ineffiencies.  In time I hope to create a new branch were I redo each solution more efficiently, but c'mon, one step at a time folks!
