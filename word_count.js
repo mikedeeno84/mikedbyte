@@ -2,7 +2,7 @@
 
 Use the Parameter Testing feature in the box below to test your code with different arguments. */
 
-function WordCount(str) { 
+function WordCount(str) { //starts with 1 word and increments the word total every time a space is encountered.
 	var words=1;
 	for (var counter=0; counter<str.length; counter++)
      	if (str[counter]===" ")
