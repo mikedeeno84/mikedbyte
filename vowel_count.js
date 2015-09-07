@@ -5,7 +5,7 @@ Use the Parameter Testing feature in the box below to test your code with differ
 function VowelCount(str) { 
 	var vowels = ["A","E","I","O","U","a","e",'i', 'o', 'u'];
   var vCount=0;
-  for (var letter in str){
+  for (var letter in str){//loop through the string and increment vCount each time a vowel is found
     if (vowels.indexOf(str[letter]) >=0){
       vCount++; }
   }
